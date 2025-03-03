@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+export CUSTOM_COMPILE_COMMAND="./pip-build"
+pip-compile requirements.in --no-emit-index-url
+pip-compile requirements-dev.in --no-emit-index-url
+pip-compile requirements-test.in --no-emit-index-url
+python refresh_precommit.py
